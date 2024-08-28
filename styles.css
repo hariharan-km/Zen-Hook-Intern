@@ -1,0 +1,214 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0B1F2A;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: transparent;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00F8FF;
+}
+
+.user-icon img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 80px;
+    /* background-color: #0B1F2A; */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background-image.png') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 45%;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #B3B3B3;
+}
+
+.btn {
+    padding: 15px 35px;
+    background-color: #00F8FF;
+    color: #0B1F2A;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #00C8CC;
+    transform: translateY(-5px);
+}
+
+/* VR Information Section */
+.vr-info {
+    max-width: 45%;
+    text-align: left;
+}
+
+.vr-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.vr-info p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #B3B3B3;
+}
+
+.btn.secondary {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid #00F8FF;
+    color: #00F8FF;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn.secondary:hover {
+    background-color: #00F8FF;
+    color: #0B1F2A;
+}
+
+/* VR Products Section */
+.vr-products {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product-item {
+    background-color: #14232F;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.product-item p {
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.product-item a {
+    color: #00F8FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 50px;
+        height: auto;
+    }
+
+    .hero-content, .vr-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .vr-products {
+        flex-direction: column;
+    }
+}
